@@ -2,7 +2,7 @@
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import Section from '../components/Section.svelte';
-	import educa_video from '$lib/videos/educa_video.mp4';
+	import educa_fvideo from '$lib/videos/educa_fvideo.mp4';
 	import { browser } from '$app/environment';
 	import education_section from '$lib/images/education_section.jpg';
 	import health_section from '$lib/images/health_section.jpg';
@@ -32,7 +32,7 @@
 <div class="full-width">
 	<section class="video-section">
 		<a href="#IT"><span /></a>
-		<video autoplay loop class="educa-video" muted src={educa_video} />
+		<video autoplay loop class="educa-video" muted src={educa_fvideo} />
 	</section>
 	<Section
 		props={{
