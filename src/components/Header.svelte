@@ -2,6 +2,14 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	let y: number;
+	function myFunction() {
+		var x = document.querySelector('nav');
+		if (x?.className === '') {
+			x.className += ' responsive';
+		} else {
+			x.className = '';
+		}
+	}
 	onMount(() => {
 		const header = document.querySelector('header');
 		const capitalTitle = document.querySelector('.logo-title');
@@ -33,6 +41,9 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
+			<a href="/" class="icon">
+				<li class="fa fa-bars fa-lg" />
+			</a>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">Home</a>
 			</li>
@@ -50,6 +61,12 @@
 </header>
 
 <style>
+	.icon {
+		display: none;
+		width: 2rem;
+		height: auto;
+		text-align: center;
+	}
 	.logos {
 		transition: all;
 		width: auto;
@@ -77,7 +94,7 @@
 		height: auto;
 		display: flex;
 		position: fixed;
-		z-index: 9999;
+		z-index: 100;
 		width: 100%;
 		height: 60px;
 		align-items: center;
@@ -86,12 +103,19 @@
 		background-color: var(--color-theme-1);
 	}
 
-	@media (max-width: 800px) {
+	@media screen and (max-width: 800px) {
 		header {
 			position: relative;
 		}
-		nav {
-			display: none !important;
+		:global(main) {
+			padding-top: 0 !important;
+		}
+
+		nav > ul li:not(:nth-child(1)) {
+			display: none;
+		}
+		a.icon {
+			display: inline;
 		}
 	}
 

@@ -24,6 +24,7 @@
 
 <svelte:head>
 	<title>Educa US</title>
+
 	<meta name="description" content="Educa US" />
 </svelte:head>
 

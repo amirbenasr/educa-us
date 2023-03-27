@@ -19,7 +19,7 @@
 
 <section class="testimonials">
 	<div class="section-title">
-		<h1>Testimonials</h1>
+		<h1 style="color:var(--color-theme-2)">Testimonials</h1>
 	</div>
 	<div class="testimonials-slider">
 		{#key index}

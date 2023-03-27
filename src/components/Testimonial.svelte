@@ -7,7 +7,7 @@
 	onMount(() => {
 		setTimeout(() => {
 			element.classList.add('active');
-		}, 100);
+		}, 0);
 	});
 </script>
 
@@ -22,7 +22,7 @@
 			<h2>{testimonial.student_name}</h2>
 		</div>
 		<div class="testimonial">
-			<p>
+			<p style="color:var(--color-theme-2-lighter) ">
 				{testimonial.testimonial}
 			</p>
 		</div>
@@ -30,6 +30,9 @@
 </div>
 
 <style>
+	.title {
+		color: var(--color-theme-2);
+	}
 	.testimonial {
 		text-overflow: ellipsis;
 		width: fit-content;
