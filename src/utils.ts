@@ -8,36 +8,42 @@ export const testimonials: Testimonial[] = [
 	{
 		image: 'img_1',
 		student_name: 'Aziz Bardi',
-		testimonial: ''
+		testimonial:
+			'Educa us Team provided me with a personalized itinerary that allowed me to fully immerse myself in the local culture and learn about the history and traditions of the places I visited. '
 	},
 
 	{
 		image: 'img_2',
 		student_name: 'Mayssa mehouechi',
-		testimonial: ''
+		testimonial:
+			'Educa Us provided me with an exceptional travel education experience that surpassed all my expectations. The personalized itinerary created by their team of travel experts and educators was impressive'
 	},
 
 	{
 		image: 'img_3',
 		student_name: 'Rani  maghrbi',
-		testimonial: ''
+		testimonial:
+			'My travel education experience with Educa Us was nothing short of exceptional. The customized itinerary crafted by their team of travel experts and educators allowed me to explore the local culture and history to a great extent'
 	},
 
 	{
 		image: 'img_4',
 		student_name: 'Safouene ben rjeb',
-		testimonial: ''
+		testimonial:
+			'The team of travel experts and educators worked tirelessly to ensure that every aspect of my trip was seamless and stress-free. The language immersion course and educational tours were excellent'
 	},
 
 	{
 		image: 'img_5',
 		student_name: 'Khalil chatti',
-		testimonial: ''
+		testimonial:
+			'My education travel experience with Educa Us was simply amazing, I would highly recommend their services to anyone seeking an immersive and educational travel experience.'
 	},
 
 	{
 		image: 'img_6',
 		student_name: 'Yessin dahmene',
-		testimonial: ''
+		testimonial:
+			"The itinerary was seamlessly organized, making the trip stress-free and enjoyable. The agency's attention to detail and commitment to customer satisfaction was truly exceptional."
 	}
 ];

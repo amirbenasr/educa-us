@@ -46,18 +46,7 @@
 			position: 'top right'
 		}}
 	/>
-	<Section
-		props={{
-			sectionId: 'test',
-			title: 'Health Care',
-			description:
-				'Traveling for medical treatment or education can be overwhelming. Our healthcare section offers personalized assistance to help you find the best facilities and education worldwide. We prioritize safety, quality, and affordability in our recommendations, ensuring you have access to the most advanced medical treatments and education. Let us be your partner in your healthcare journey.',
-			color: '',
-			image: career_section,
-			left: true,
-			position: 'top left'
-		}}
-	/>
+
 	<Section
 		props={{
 			sectionId: 'health',
@@ -70,6 +59,18 @@
 			position: 'center  top    '
 		}}
 	/>
+	<Section
+		props={{
+			sectionId: 'test',
+			title: 'Scolarship Program',
+			description:
+				'Our scholarship programs are highly competitive, and we select successful applicants based on their academic achievements, leadership potential, and community involvement. We aim to support students in their pursuit of academic excellence, personal growth, and career development through our scholarship programs.',
+			color: '',
+			image: career_section,
+			left: true,
+			position: 'top left'
+		}}
+	/>
 	<Testimonials />
 </div>
 
@@ -79,7 +80,7 @@
 		position: absolute;
 		left: 50%;
 		bottom: 2px;
-		margin-right: -15px;
+		margin-left: -15px;
 		width: 30px;
 		height: 50px;
 		border: 2px solid #ffffff;

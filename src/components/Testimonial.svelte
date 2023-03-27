@@ -23,9 +23,7 @@
 		</div>
 		<div class="testimonial">
 			<p>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, officia minima. Ullam
-				voluptatibus, tenetur mollitia perspiciatis hic, officiis rerum quod ducimus debitis odit
-				incidunt molestiae magni amet deleniti.
+				{testimonial.testimonial}
 			</p>
 		</div>
 	</div>
@@ -35,6 +33,7 @@
 	.testimonial {
 		width: 32rem;
 	}
+
 	p {
 		font-size: 1.1rem;
 		line-height: 1.5rem;
@@ -70,6 +69,7 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: start;
+		text-align: center;
 	}
 	@media (max-width: 600px) {
 		.section-body {

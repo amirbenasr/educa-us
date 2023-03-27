@@ -4,23 +4,43 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>About this app</h1>
+	<h1>About Educa us</h1>
 
 	<p>
-		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
-		following into your command line and following the prompts:
-	</p>
-
-	<pre>npm create svelte@latest</pre>
-
-	<p>
-		The page you're looking at is purely static HTML, with no client-side interactivity needed.
-		Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-		the devtools network panel and reloading.
+		Welcome to Educa Us, a travel education agency that believes education and travel go hand in
+		hand. We are passionate about providing our clients with unique and immersive travel experiences
+		that not only broaden their horizons but also enrich their knowledge of the world..
 	</p>
 
 	<p>
-		The <a href="/sverdle">Sverdle</a> page illustrates SvelteKit's data loading and form handling. Try
-		using it with JavaScript disabled!
+		Our team at Educa Us consists of travel experts and educators who have years of experience in
+		creating customized educational travel itineraries. We understand that every traveler has
+		different needs and interests, which is why we work closely with each client to create a
+		personalized itinerary that meets their specific requirements.
+	</p>
+
+	<p>
+		Our travel education programs are designed to provide a well-rounded educational experience. At
+		Educa Us, we offer a wide range of programs, including language immersion courses, cultural
+		exchanges, study abroad programs, and educational tours. Our programs are designed to give our
+		clients an opportunity to learn about the local culture, history, and traditions of the places
+		they visit.
+	</p>
+	<p>
+		We believe that education and travel should be accessible to everyone, which is why Educa Us
+		offers affordable programs that cater to a wide range of budgets. We are committed to providing
+		our clients with the best value for their money and ensuring that they have a memorable and
+		enriching travel experience.
+	</p>
+	<p>
+		At Educa Us, we pride ourselves on our commitment to customer satisfaction. We work tirelessly
+		to ensure that every aspect of our clients' travel experience is seamless and stress-free. From
+		the initial planning stages to the end of the trip, we are here to provide our clients with the
+		support they need to have a safe, comfortable, and enjoyable trip.
+	</p>
+
+	<p>
+		Thank you for considering <a href="/"><span>Educa us</span></a> for your next adventure. We look
+		forward to helping you discover the world and learn something new along the way.
 	</p>
 </div>

@@ -49,8 +49,8 @@
 	<div class="text-section">
 		<div class="section-title">
 			<h1><span class="title-prefix-icon">|</span> {title}</h1>
+			<p>{description}</p>
 		</div>
-		<p>{description}</p>
 	</div>
 </div>
 
@@ -83,9 +83,18 @@
 		position: relative;
 		display: flex;
 		background-repeat: no-repeat;
-		background-size: auto !important;
+		background-size: auto;
+		background-position-x: top !important;
 		width: auto;
 		height: 24rem;
+	}
+	@media (max-width: 700px) {
+		p {
+			visibility: hidden;
+		}
+		.position-end {
+			justify-content: start;
+		}
 	}
 	p {
 		line-height: 1.125rem;
@@ -97,22 +106,10 @@
 		flex-direction: column;
 		align-items: start;
 		justify-content: center;
-		padding: 1rem;
+		padding: 0;
 		opacity: 0;
 		transition: all 500ms ease-in-out;
 		color: white;
 		z-index: 3 !important;
-	}
-	.card {
-		position: absolute;
-		top: 0;
-		background-color: white;
-		height: 12rem;
-		width: 24rem;
-		padding: 1rem;
-		opacity: 0.4;
-		z-index: 0 !important;
-		border-radius: 8%;
-		margin: 8px;
 	}
 </style>
