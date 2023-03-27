@@ -28,8 +28,6 @@
 
 		if (browser) {
 			document.addEventListener('scroll', (e) => {
-				// isActive = true;
-				console.log(window.innerHeight);
 				sections.forEach((element) => {
 					if (window.innerHeight - element.getBoundingClientRect().top > 150) {
 						element.classList.add('active');

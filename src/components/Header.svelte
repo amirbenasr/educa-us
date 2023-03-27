@@ -53,7 +53,7 @@
 	.logos {
 		transition: all;
 		width: auto;
-		/* transition-duration: 3s; */
+		transition-duration: 3s;
 	}
 
 	.logo-span span {
@@ -64,12 +64,13 @@
 		font-size: 4rem;
 	}
 	.logo-title {
+		scale: 0.9;
 		font-family: Georgia, 'Times New Roman', Times, serif;
-		font-size: 3rem;
+		font-size: clamp(2rem, 1.125vw, 3rem);
 		font-weight: bold;
 		color: white;
 		font-size: x-large;
-		margin-left: 4em;
+		margin-left: 2rem;
 		transition: all 300ms ease-in;
 	}
 	header {
@@ -81,13 +82,22 @@
 		height: 60px;
 		align-items: center;
 		justify-content: space-between;
-		transition: all 200ms ease-in;
+		/* transition: all 200ms ease-in; */
 		background-color: var(--color-theme-1);
 	}
 
+	@media (max-width: 800px) {
+		header {
+			position: relative;
+		}
+		nav {
+			display: none !important;
+		}
+	}
+
 	:global(.shrink) {
-		/* animation: sh 1s ease-in 0s forwards; */
-		transform: translateX(-80px) scale3d(0.8, 0.8, 0.8);
+		animation: sh 1s ease-in 0s forwards;
+		transform: translateX(-20px) scale3d(0.7, 0.7, 0.7);
 	}
 
 	:global(.shrink-header) {

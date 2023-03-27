@@ -14,8 +14,6 @@
 		document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 			anchor.addEventListener('click', function (e) {
 				e.preventDefault();
-				console.log(this.getAttribute('href'));
-
 				document.querySelector(this.getAttribute('href')).scrollIntoView({
 					behavior: 'smooth'
 				});
@@ -49,18 +47,6 @@
 
 	<Section
 		props={{
-			sectionId: 'health',
-			title: 'Health Care',
-			description:
-				'Traveling for medical treatment or education can be overwhelming. Our healthcare section offers personalized assistance to help you find the best facilities and education worldwide. We prioritize safety, quality, and affordability in our recommendations, ensuring you have access to the most advanced medical treatments and education. Let us be your partner in your healthcare journey.',
-			color: '',
-			image: health_section,
-			left: false,
-			position: 'center  top    '
-		}}
-	/>
-	<Section
-		props={{
 			sectionId: 'test',
 			title: 'Scolarship Program',
 			description:
@@ -69,6 +55,18 @@
 			image: career_section,
 			left: true,
 			position: 'top left'
+		}}
+	/>
+	<Section
+		props={{
+			sectionId: 'health',
+			title: 'Health Care',
+			description:
+				'Traveling for medical treatment or education can be overwhelming. Our healthcare section offers personalized assistance to help you find the best facilities and education worldwide. We prioritize safety, quality, and affordability in our recommendations, ensuring you have access to the most advanced medical treatments and education. Let us be your partner in your healthcare journey.',
+			color: '',
+			image: health_section,
+			left: false,
+			position: 'center  top    '
 		}}
 	/>
 	<Testimonials />
@@ -124,8 +122,6 @@
 		width: 100%;
 	}
 	.educa-video {
-		padding: 0 0 0 0;
-		margin: 0 0;
 		width: 100%;
 	}
 	section {

@@ -6,8 +6,8 @@
 	let element: Element;
 	onMount(() => {
 		setTimeout(() => {
-			element.classList.toggle('active');
-		}, 0);
+			element.classList.add('active');
+		}, 100);
 	});
 </script>
 
@@ -31,11 +31,20 @@
 
 <style>
 	.testimonial {
-		width: 32rem;
+		text-overflow: ellipsis;
+		width: fit-content;
+		margin: 16px;
+		overflow-wrap: break-word;
+	}
+
+	@media (min-width: 1000px) {
+		.testimonial {
+			width: 32rem;
+		}
 	}
 
 	p {
-		font-size: 1.1rem;
+		font-size: clamp(1rem, 1.125vm, 2rem);
 		line-height: 1.5rem;
 		text-align: center;
 	}
@@ -48,8 +57,8 @@
 		font-size: 2rem;
 	}
 	.img-container {
+		width: auto;
 		margin: 6px;
-		height: 20rem;
 		height: 20rem;
 		/* border: 2px solid #fff; */
 		border-radius: 25px;
