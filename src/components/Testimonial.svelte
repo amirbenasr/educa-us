@@ -7,7 +7,7 @@
 	onMount(() => {
 		setTimeout(() => {
 			element.classList.add('active');
-		}, 0);
+		}, 100);
 	});
 </script>
 

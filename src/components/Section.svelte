@@ -81,10 +81,10 @@
 		position: relative;
 		display: flex;
 		background-repeat: no-repeat;
-		background-size: auto;
+		background-size: cover;
 		background-position-x: top !important;
-		width: auto;
-		height: 24rem;
+		max-height: 450px;
+		max-width: 1920px;
 	}
 	@media (max-width: 700px) {
 		p {

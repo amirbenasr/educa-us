@@ -9,6 +9,9 @@
 	import career_section from '$lib/images/career_section.jpg';
 	import { onMount } from 'svelte';
 	import Testimonials from '../components/Testimonials.svelte';
+	import Mapsection from '../components/Map.svelte';
+	import Showcase from '../components/Showcase.svelte';
+	import Stats from '../components/Stats.svelte';
 
 	onMount(() => {
 		document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -70,7 +73,10 @@
 			position: 'center  top    '
 		}}
 	/>
+
+	<Stats />
 	<Testimonials />
+	<Showcase />
 </div>
 
 <style>

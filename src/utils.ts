@@ -47,3 +47,22 @@ export const testimonials: Testimonial[] = [
 			"The itinerary was seamlessly organized, making the trip stress-free and enjoyable. The agency's attention to detail and commitment to customer satisfaction was truly exceptional."
 	}
 ];
+
+export const animateValue = (
+	obj: HTMLElement,
+	start: number,
+	end: number,
+	duration: number,
+	literal = ''
+) => {
+	let startTimestamp: any = null;
+	const step = (timestamp: number) => {
+		if (!startTimestamp) startTimestamp = timestamp;
+		const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+		obj.innerText = Math.floor(progress * (end - start) + start).toString() + literal;
+		if (progress < 1) {
+			window.requestAnimationFrame(step);
+		}
+	};
+	window.requestAnimationFrame(step);
+};

@@ -28,6 +28,9 @@
 
 <svelte:window bind:scrollY={y} />
 <header>
+	<div class="corner">
+		<img src="/logo_white.png" alt="" srcset="" />
+	</div>
 	<div class="logos">
 		<div class="corner logo-span">
 			<a href="#">
