@@ -7,7 +7,12 @@ export type Member = {
 export const members: Member[] = [
 	{
 		img: 'profile.png',
-		name: 'Zied oeurtain',
+		name: 'Zied ouertani',
+		position: 'CEO'
+	},
+	{
+		img: 'profile.png',
+		name: 'XYZ',
 		position: 'CEO'
 	}
 ];

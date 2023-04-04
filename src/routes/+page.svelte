@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import Section from '../components/Section.svelte';
@@ -12,6 +12,7 @@
 	import Mapsection from '../components/Map.svelte';
 	import Showcase from '../components/Showcase.svelte';
 	import Stats from '../components/Stats.svelte';
+	import Partners from '../components/Partners.svelte';
 
 	onMount(() => {
 		document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -77,6 +78,7 @@
 	<Stats />
 	<Testimonials />
 	<Showcase />
+	<Partners />
 </div>
 
 <style>

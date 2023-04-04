@@ -8,7 +8,7 @@
 		if (x?.className === '') {
 			x.className += ' responsive';
 		} else {
-			x.className = '';
+			x!.className = '';
 		}
 	}
 	onMount(() => {
@@ -89,29 +89,12 @@
 		height: auto;
 		text-align: center;
 	}
-	.logos {
+	.corner {
 		transition: all;
 		width: auto;
 		transition-duration: 3s;
 	}
 
-	.logo-span span {
-		vertical-align: middle !important;
-	}
-	.capital-title {
-		font-weight: bold;
-		font-size: 4rem;
-	}
-	.logo-title {
-		scale: 0.9;
-		font-family: Georgia, 'Times New Roman', Times, serif;
-		font-size: clamp(2rem, 1.125vw, 3rem);
-		font-weight: bold;
-		color: white;
-		font-size: x-large;
-		margin-left: 2rem;
-		transition: all 300ms ease-in;
-	}
 	header {
 		height: auto;
 		display: flex;
