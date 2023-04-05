@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	let y: number;
 	let navModal: HTMLElement;
+	let header: HTMLElement;
 	function myFunction() {
 		var x = document.querySelector('nav');
 		if (x?.className === '') {
@@ -12,16 +13,17 @@
 		}
 	}
 	onMount(() => {
-		const header = document.querySelector('header');
-		const capitalTitle = document.querySelector('.logo-title');
+		const svg = document.querySelector('svg');
+		const nav = document.querySelector('.navigation-modal');
 		document.addEventListener('scroll', (e) => {
 			if (y > 50) {
-				header?.classList.add('shrink-header');
-				capitalTitle?.classList.add('shrink');
+				header.classList.add('shrink-header');
+				svg?.classList.add('shrink-header');
+				nav?.classList.add('shrink-header');
 			} else {
-				capitalTitle?.classList.remove('shrink');
-
-				header?.classList.remove('shrink-header');
+				nav?.classList.remove('shrink-header');
+				svg?.classList.remove('shrink-header');
+				header.classList.remove('shrink-header');
 			}
 		});
 	});
@@ -30,24 +32,23 @@
 		event: MouseEvent & { currentTarget: EventTarget & HTMLAnchorElement }
 	): any {
 		navModal.classList.toggle('visible');
+		if (header.style.marginBottom == '60px') {
+			header.style.marginBottom = '0px';
+			return;
+		}
+		header.style.marginBottom = '60px';
 	}
 </script>
 
 <svelte:window bind:scrollY={y} />
-<header>
+<header bind:this={header}>
 	<div class="corner">
 		<img src="/logo_white_inline.png" alt="" srcset="" />
 	</div>
-	<!-- <div class="logos">
-		<div class="corner logo-span">
-			<a href="#">
-				<span class="logo-title"> <span class="capital-title">E</span> | Educa US</span>
-			</a>
-		</div>
-	</div> -->
+
 	<nav class="web-nav">
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
+		<svg fill="transparent">
+			<path d="M0,0 L30,0 L30,60 C15,50 10,40 0,0 Z" />
 		</svg>
 		<ul class="navigation-modal">
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
@@ -63,20 +64,25 @@
 	</nav>
 
 	<nav class="mobile-nav">
-		<a href="/" class="icon active" on:click={toggleModal}>
-			<li class="fa fa-bars fa-lg" />
-		</a>
-		<ul class="navigation-modal" bind:this={navModal}>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a on:click={toggleModal} href="/">Home</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a on:click={toggleModal} href="/about">About</a>
-			</li>
-			<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
-				<a on:click={toggleModal} href="/articles">Articles</a>
-			</li>
-		</ul>
+		<div class="hamburger">
+			<a on:click={toggleModal} href="#">
+				<li class="fa fa-bars fa-xl active" />
+			</a>
+		</div>
+
+		<div>
+			<ul class="navigation-modal" bind:this={navModal}>
+				<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+					<a on:click={toggleModal} href="/">Home</a>
+				</li>
+				<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
+					<a on:click={toggleModal} href="/about">About</a>
+				</li>
+				<li aria-current={$page.url.pathname.startsWith('/sverdle') ? 'page' : undefined}>
+					<a on:click={toggleModal} href="/articles">Articles</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 </header>
 
@@ -89,22 +95,25 @@
 		height: auto;
 		text-align: center;
 	}
+	.web-nav {
+		position: absolute;
+		right: 0;
+		transition: all 200ms ease-in;
+	}
 	.corner {
-		transition: all;
-		width: auto;
-		transition-duration: 3s;
+		transition: all 3s ease-in-out;
+		position: absolute;
 	}
 
 	header {
-		height: auto;
-		display: flex;
+		display: block;
 		position: fixed;
-		z-index: 100;
+		z-index: 1;
 		width: 100%;
 		height: 60px;
 		align-items: center;
 		justify-content: space-between;
-		/* transition: all 200ms ease-in; */
+		transition: all 200ms ease-in;
 		background-color: var(--color-theme-1);
 	}
 
@@ -115,22 +124,26 @@
 		nav.web-nav {
 			display: none;
 		}
+
 		nav.mobile-nav {
-			display: block !important;
+			/* display: block; */
 			position: relative;
+			text-align: center;
+			display: grid;
+		}
+		.hamburger {
+			color: white;
+			align-self: center;
+			inset: 30px auto auto auto;
+			position: absolute;
 		}
 
 		.navigation-modal {
+			position: absolute;
+			width: 100%;
+			inset: 60px 0 auto 0;
 			visibility: hidden;
 			opacity: 0;
-			display: block;
-			display: flex;
-			position: absolute;
-			right: 0px;
-			top: 8px;
-			height: 150px;
-			width: auto;
-			flex-direction: column;
 			transition: all 200ms ease-in-out;
 		}
 		:global(.visible) {
@@ -142,11 +155,9 @@
 		}
 	}
 
-	:global(.shrink) {
-		animation: sh 1s ease-in 0s forwards;
-		transform: translateX(-20px) scale3d(0.7, 0.7, 0.7);
+	.navigation-modal {
+		transition: all 200ms ease-in;
 	}
-
 	:global(.shrink-header) {
 		height: 50px !important;
 	}
@@ -156,7 +167,6 @@
 	.corner {
 		display: block;
 		text-align: center;
-		transform: translateX(10px);
 		align-items: center;
 		justify-content: center;
 		width: 100%;
@@ -176,9 +186,10 @@
 	}
 
 	svg {
-		width: 2em;
-		height: 3em;
 		display: block;
+		width: 30px;
+		height: 60px;
+		transition: all 200ms ease-in;
 	}
 
 	path {
@@ -189,7 +200,7 @@
 		position: relative;
 		padding: 0;
 		margin: 0;
-		height: 3em;
+		height: 60px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
