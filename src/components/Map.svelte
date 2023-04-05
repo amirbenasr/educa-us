@@ -8,7 +8,7 @@
 
 <div class="map-container">
 	<svg
-		width="1000px"
+		width="1011px"
 		height="auto"
 		viewBox="0px 0px 0px 0px"
 		stroke="#000000"
@@ -645,7 +645,8 @@
 	}
 
 	.map-container {
-		width: 1000px;
+		transform: translateX(calc(100vw-1200) px);
+		width: 1100px;
 		height: 500px;
 		position: relative;
 		display: flex;

@@ -125,6 +125,8 @@
 
 	.video-section {
 		position: relative;
+		/* height: 85vh; */
+		/* margin-top: 60px; */
 	}
 
 	.full-width {
