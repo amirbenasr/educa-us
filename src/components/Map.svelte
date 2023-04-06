@@ -645,7 +645,7 @@
 	}
 
 	.map-container {
-		transform: translateX(calc(100vw-1200) px);
+		transform: translateX(calc(100vw-1200px));
 		width: 1100px;
 		height: 500px;
 		position: relative;
