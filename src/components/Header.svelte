@@ -4,6 +4,7 @@
 	let y: number;
 	let navModal: HTMLElement;
 	let header: HTMLElement;
+	let logo: HTMLElement;
 	function myFunction() {
 		var x = document.querySelector('nav');
 		if (x?.className === '') {
@@ -17,10 +18,15 @@
 		const nav = document.querySelector('.navigation-modal');
 		document.addEventListener('scroll', (e) => {
 			if (y > 50) {
+				logo.style.width = '163px';
+				logo.style.height = '50px';
 				header.classList.add('shrink-header');
 				svg?.classList.add('shrink-header');
 				nav?.classList.add('shrink-header');
 			} else {
+				logo.style.width = '100%';
+				logo.style.height = '60px';
+
 				nav?.classList.remove('shrink-header');
 				svg?.classList.remove('shrink-header');
 				header.classList.remove('shrink-header');
@@ -42,7 +48,7 @@
 
 <svelte:window bind:scrollY={y} />
 <header bind:this={header}>
-	<div class="corner">
+	<div class="logo" bind:this={logo}>
 		<img src="/logo_white_inline.png" alt="" srcset="" />
 	</div>
 
@@ -90,29 +96,19 @@
 	.mobile-nav {
 		display: none;
 	}
-	.icon {
-		width: 2rem;
-		height: auto;
-		text-align: center;
-	}
+
 	.web-nav {
 		position: absolute;
-		right: 0;
+		inset: auto 0 auto auto;
 		transition: all 200ms ease-in;
-	}
-	.corner {
-		transition: all 3s ease-in-out;
-		position: absolute;
 	}
 
 	header {
 		display: block;
 		position: fixed;
-		z-index: 1;
+		z-index: 9999;
 		width: 100%;
 		height: 60px;
-		align-items: center;
-		justify-content: space-between;
 		transition: all 200ms ease-in;
 		background-color: var(--color-theme-1);
 	}
@@ -164,18 +160,19 @@
 	.active {
 		color: white;
 	}
-	.corner {
+	.logo {
 		display: block;
+		max-width: 100%;
+		inset: auto 0 auto 0;
 		text-align: center;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
+		padding-left: 1.75rem;
+		position: absolute;
+		transition: all 800ms ease-in-out;
 	}
 
-	.corner img {
+	.logo img {
 		max-width: 100%;
-		max-height: 100%;
+		max-height: 60px;
 		object-fit: contain;
 	}
 

@@ -42,8 +42,8 @@
 			sectionId: 'IT',
 			title: 'IT',
 			description:
-				'Our IT section offers customized solutions to keep you connected, productive, and secure while traveling. We specialize in network security, cloud computing, data management, and more. Stay ahead of the curve with the latest tools and technologies that are reliable, efficient, and affordable. Let us help you stay connected and productive wherever your travels take you.',
-			color: '#ffffff',
+				'Our IT section offers customized solutions to keep you connected, productive, and secure while traveling. We specialize in network security, cloud computing, data management, and more.',
+			color: '#000000',
 			image: education_section,
 			left: false,
 			position: 'top right'
@@ -55,7 +55,7 @@
 			sectionId: 'test',
 			title: 'Scolarship Program',
 			description:
-				'Our scholarship programs are highly competitive, and we select successful applicants based on their academic achievements, leadership potential, and community involvement. We aim to support students in their pursuit of academic excellence, personal growth, and career development through our scholarship programs.',
+				'Our scholarship programs are highly competitive, and we select successful applicants based on their academic achievements, leadership potential, and community involvement.',
 			color: '',
 			image: career_section,
 			left: true,
@@ -67,7 +67,7 @@
 			sectionId: 'health',
 			title: 'Health Care',
 			description:
-				'Traveling for medical treatment or education can be overwhelming. Our healthcare section offers personalized assistance to help you find the best facilities and education worldwide. We prioritize safety, quality, and affordability in our recommendations, ensuring you have access to the most advanced medical treatments and education. Let us be your partner in your healthcare journey.',
+				'Traveling for medical treatment or education can be overwhelming. Our healthcare section offers personalized assistance to help you find the best facilities and education worldwide. ',
 			color: '',
 			image: health_section,
 			left: false,
@@ -76,7 +76,7 @@
 	/>
 
 	<Stats />
-	<Testimonials />
+	<Testimonials style={1} />
 	<Showcase />
 	<Partners />
 </div>
