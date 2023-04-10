@@ -1,30 +1,30 @@
 <script>
-	let boxes = ['red', 'green', 'blue', 'yellow'];
+	let boxes = ['california', 'texas'];
 </script>
 
 <section class="partners">
-	<div class="section-title">
+	<!-- <div class="section-title">
 		<h1 style="color:var(--color-theme-2)">Our Accreditations and Approvals</h1>
 		<span class="section-description"
 			>Atlantis University is accredited by the Accrediting Commission for Career Schools and
 			Colleges (ACCSC), and is licensed by the Commission for Independent Education (CIE), Florida
 			Department of Education.</span
 		>
-	</div>
+	</div> -->
 	<div class="container">
 		<div aria-hidden="true" class="marquee">
 			<!-- <div class="fade" /> -->
 			<div class="marquee-group">
 				{#each boxes as box}
 					<div class="box" style="background-color: {box};width:80px">
-						<img src="partners/california.png" alt="" srcset="" />
+						<img src={'partners/' + box + '.png'} alt="" srcset="" />
 					</div>
 				{/each}
 			</div>
 			<div class="marquee-group">
 				{#each boxes as box}
 					<div class="box" style="background-color: {box};width:80px">
-						<img src="partners/california.png" alt="" srcset="" />
+						<img src={'partners/' + box + '.png'} alt="" srcset="" />
 					</div>
 				{/each}
 			</div>
@@ -41,11 +41,11 @@
 
 <style>
 	.box {
-		width: 100px !important;
 		margin-right: 2rem;
 	}
 	.box img {
 		max-width: 100%;
+		max-height: 100%;
 		object-fit: contain;
 	}
 	.marquee-group {

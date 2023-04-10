@@ -49,7 +49,9 @@
 <svelte:window bind:scrollY={y} />
 <header bind:this={header}>
 	<div class="logo" bind:this={logo}>
-		<img src="/logo_white_inline.png" alt="" srcset="" />
+		<a href="/">
+			<img src="/logo_white_inline.png" alt="" srcset="" />
+		</a>
 	</div>
 
 	<nav class="web-nav">

@@ -28,6 +28,8 @@
 	}
 	.section-content {
 		display: flex;
+		align-items: center;
+		justify-content: center;
 		gap: 3rem;
 	}
 	.states__list {

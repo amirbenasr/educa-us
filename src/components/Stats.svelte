@@ -3,11 +3,15 @@
 	import { animateValue } from '../utils.js';
 	let animted = false;
 	let sectionElement: HTMLElement;
-	let successRate: HTMLElement, studentsRate: HTMLElement, visaRate: HTMLElement;
+	let successRate: HTMLElement,
+		studentsRate: HTMLElement,
+		visaRate: HTMLElement,
+		masterRate: HTMLElement;
 	function showRates() {
 		animateValue(visaRate!, 0, 96, 1500, '%');
 		animateValue(studentsRate!, 0, 250, 2500, '+');
 		animateValue(successRate!, 0, 97, 5000, '%');
+		animateValue(masterRate!, 0, 97, 5000, '%');
 	}
 	onMount(() => {
 		document.addEventListener('scroll', (e) => {
@@ -31,6 +35,10 @@
 	<div class="circle-stats">
 		<span class="circle-stat-title" id="success-rate" bind:this={successRate} />
 		<span> Integration Rate </span>
+	</div>
+	<div class="circle-stats">
+		<span class="circle-stat-title" id="success-rate" bind:this={masterRate} />
+		<span> Master Acceptance Rate </span>
 	</div>
 </section>
 

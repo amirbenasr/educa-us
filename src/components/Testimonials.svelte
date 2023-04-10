@@ -91,6 +91,8 @@
 		padding: 0 !important;
 	}
 	.picture {
+		cursor: pointer;
+
 		height: 24rem;
 		padding: 0 !important;
 		margin: 0 !important;
@@ -105,9 +107,10 @@
 		font-size: 16px;
 		box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 	}
+
 	.picture img {
 		vertical-align: top;
-		opacity: 0.5;
+		opacity: 0.6;
 		max-width: 100%;
 		height: auto;
 		object-fit: contain;
