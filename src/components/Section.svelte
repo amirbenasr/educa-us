@@ -46,29 +46,21 @@
 >
 	<a class="button" href="http://">Learn More <i class="fa-solid fa-angles-right" /> </a>
 
-	<div class="text-section">
-		<div class="section-title">
-			<h1><span class="title-prefix-icon">|</span> {title}</h1>
-			<p>{description}</p>
+	<div class="container">
+		<div class="text-section">
+			<div class="section-title">
+				<h1><span class="title-prefix-icon">|</span> {title}</h1>
+				<p>{description}</p>
+			</div>
 		</div>
 	</div>
 </div>
 
 <style>
-	.center-prefix {
-		text-align: center;
-		border: 1px solid red;
-		height: 70px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
 	.title-prefix-icon {
-		font-size: 4rem;
+		font-size: clamp(0.75rem, 0.75rem+2vw, 4rem);
 		line-height: 1rem;
 		font-weight: lighter;
-		/* background-color: red; */
-		/* font-size: 32px; */
 	}
 	:global(.text-section.active) {
 		opacity: 1 !important;
@@ -84,9 +76,9 @@
 		display: flex;
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position-x: top !important;
+		/* background-position-x: top !important; */
 		height: 450px;
-		/* max-width: 1920px; */
+		width: 100%;
 	}
 	.button {
 		text-decoration: none;
@@ -114,7 +106,7 @@
 		text-align: center;
 	}
 	.button:hover {
-		background-color: #0a3161;
+		background-color: transparent;
 		color: white;
 		border: 2px solid white;
 	}
@@ -139,14 +131,11 @@
 	}
 	.text-section {
 		padding-left: 1.5rem;
-		width: 32rem;
 		transform: translateX(-25px);
 		display: flex;
 		flex-direction: column;
 		align-items: start;
 		justify-content: start;
-		/* padding: 0; */
-
 		opacity: 0;
 		transition: all 500ms ease-in-out;
 		color: white;

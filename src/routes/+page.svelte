@@ -13,6 +13,8 @@
 	import Showcase from '../components/Showcase.svelte';
 	import Stats from '../components/Stats.svelte';
 	import Partners from '../components/Partners.svelte';
+	import AdvancedTestimonials from '../components/AdvancedTestimonials.svelte';
+	import Header from '../components/Header.svelte';
 
 	onMount(() => {
 		document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -35,8 +37,10 @@
 <div class="full-width">
 	<section class="video-section">
 		<a href="#IT"><span /></a>
-		<video autoplay loop class="educa-video" muted src={educa_fvideo} />
+		<video paused class="educa-video" muted src={educa_fvideo} />
 	</section>
+	<AdvancedTestimonials />
+
 	<Section
 		props={{
 			sectionId: 'IT',
@@ -58,8 +62,8 @@
 				'Our scholarship programs are highly competitive, and we select successful applicants based on their academic achievements, leadership potential, and community involvement.',
 			color: '',
 			image: career_section,
-			left: true,
-			position: 'top left'
+			left: false,
+			position: 'top right'
 		}}
 	/>
 	<Section
@@ -76,8 +80,8 @@
 	/>
 
 	<Stats />
-	<Testimonials style={1} />
 	<Showcase />
+	<!-- <Testimonials style={1} /> -->
 	<Partners />
 </div>
 
@@ -141,25 +145,5 @@
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
 	}
 </style>

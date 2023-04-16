@@ -9,8 +9,9 @@
 
 	<div class="section-content">
 		<ul class="states__list">
-			<li>Washington</li>
+			<li>Washington D.C</li>
 			<li>California</li>
+			<li>Pennsylvania</li>
 			<li>Texas</li>
 			<li>Florida</li>
 			<li>New York</li>

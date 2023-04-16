@@ -25,7 +25,24 @@
 			</div>
 		</div>
 	</div>
-	<span class="divider" />
+	<!-- <span class="divider" /> -->
+
+	<div class="contact">
+		<div class="contact-details">
+			<span class="contact-header"> Email us </span>
+			<a href="mailto:educaustravel@gmail.com" class="blue-icon"><p>educaustravel@gmail.com</p></a>
+		</div>
+	</div>
+	<!-- <span class="divider" /> -->
+	<div class="contact">
+		<div class="contact-details">
+			<span class="contact-header"> contact us </span>
+
+			<a href="tel:+21655961771" class="blue-icon"><p>+216.55.961.771</p></a>
+		</div>
+	</div>
+	<!-- <span class="divider" /> -->
+
 	<div class="icons">
 		<a href="https://www.instagram.com/educa_us/" target="_blank">
 			<i class="fa-brands fa-instagram fa-xl blue-icon" />
@@ -44,28 +61,18 @@
 			<i class="fa-brands fa-youtube fa-xl blue-icon" />
 		</a> -->
 	</div>
-	<span class="divider" />
-	<div class="contact">
-		<div class="contact-details">
-			<span class="contact-header"> contact us </span>
-
-			<a href="tel:+21655961771" class="blue-icon"><p>+216.55.961.771</p></a>
-		</div>
-	</div>
-	<span class="divider" />
-	<div class="contact">
-		<div class="contact-details">
-			<span class="contact-header"> Email us </span>
-			<a href="mailto:educaustravel@gmail.com" class="blue-icon"><p>educaustravel@gmail.com</p></a>
-		</div>
-	</div>
 </div>
+
 <!-- <p style="text-align: center;">visit <a href="#">educa.us</a> to apply for your Visa</p> -->
 
 <!-- </footer> -->
 <style>
+	.description {
+		font-size: 100%;
+	}
 	.footer-header {
 		display: flex;
+		/* flex-shrink: 0; */
 		align-items: center;
 		justify-content: start;
 	}
@@ -82,10 +89,9 @@
 		color: var(--color-theme-2);
 	}
 	.contact-details {
-		text-align: center;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		gap: 1rem;
+		justify-content: flex-start;
 		align-items: center;
 	}
 	.contact-header {
@@ -93,27 +99,31 @@
 		text-transform: uppercase;
 	}
 	.footer {
-		height: 6rem;
 		background-color: var(--color-bg-2);
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: start;
 		align-items: center;
-		justify-content: space-evenly;
-		width: 100%;
-		padding: 16px;
+
+		gap: 1rem;
+		padding: 1rem;
 	}
+	.footer > * {
+		flex-grow: 1;
+	}
+
 	.icons {
 		width: 16rem;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
 	}
-	span.divider::after {
+	/* span.divider::after {
 		content: '';
 		border-right: 1.4px solid var(--color-theme-2);
 		height: 5rem;
 		display: flex;
-	}
+	} */
 	.blue-icon {
 		color: rgb(30, 48, 80);
 	}

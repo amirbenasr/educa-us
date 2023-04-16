@@ -30,7 +30,7 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding-top: 60px;
+		/* padding-top: 60px; */
 		width: 100%;
 		box-sizing: border-box;
 	}

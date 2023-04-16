@@ -1,5 +1,5 @@
 <script>
-	let boxes = ['california', 'texas'];
+	let boxes = ['california', 'florida', 'new-york', 'texas', 'massachussets', 'tunisia-tourism'];
 </script>
 
 <section class="partners">
@@ -31,7 +31,7 @@
 			<div class="marquee-group">
 				{#each boxes as box}
 					<div class="box" style="background-color: {box};width:80px">
-						<img src="partners/california.png" alt="" srcset="" />
+						<img src={'partners/' + box + '.png'} alt="" srcset="" />
 					</div>
 				{/each}
 			</div>
@@ -41,18 +41,22 @@
 
 <style>
 	.box {
-		margin-right: 2rem;
+		display: flex;
+		justify-content: center;
+		margin-right: 3rem;
+		width: 300px !important;
+		height: 100px !important;
 	}
 	.box img {
 		max-width: 100%;
 		max-height: 100%;
-		object-fit: contain;
+		object-fit: fill;
 	}
 	.marquee-group {
 		display: flex;
-		gap: 1rem;
+		gap: 0;
 		align-items: center;
-		animation-duration: 30s;
+		animation-duration: 25s;
 		animation-name: slide;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;

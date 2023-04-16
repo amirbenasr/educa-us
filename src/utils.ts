@@ -5,12 +5,18 @@ export type Testimonial = {
 };
 
 export const testimonials: Testimonial[] = [
-	// {
-	// 	image: 'img_1',
-	// 	student_name: 'Aziz Bardi',
-	// 	testimonial:
-	// 		'Educa us Team provided me with a personalized itinerary that allowed me to fully immerse myself in the local culture and learn about the history and traditions of the places I visited. '
-	// },
+	{
+		image: 'img_0',
+		student_name: 'Sawseen jrad',
+		testimonial:
+			'Educa us Team provided me with a personalized itinerary that allowed me to fully immerse myself in the local culture and learn about the history and traditions of the places I visited. '
+	},
+	{
+		image: 'img_1',
+		student_name: 'Aziz Bardi',
+		testimonial:
+			'Educa us Team provided me with a personalized itinerary that allowed me to fully immerse myself in the local culture and learn about the history and traditions of the places I visited. '
+	},
 
 	{
 		image: 'img_2',

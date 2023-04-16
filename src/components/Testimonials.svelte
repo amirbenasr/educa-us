@@ -24,17 +24,16 @@
 			<h1 style="color:var(--color-theme-2)">Testimonials</h1>
 		</div>
 		<div class="gallery">
-			{#each testimonials as testimonial, key}
-				{#if key != 5 && key != 0}
-					<figure class="picture">
+			{#each testimonials as testimonial}
+				<Testimonial {testimonial} />
+				<!-- <figure class="picture">
 						<img src={'/students/Photos/' + testimonial.image + '.jpg'} alt="" srcset="" />
 						<figcaption>
 							<blockquote>{testimonial.testimonial}</blockquote>
 							<h3>{testimonial.student_name}</h3>
 							<h5>Blidos</h5>
 						</figcaption>
-					</figure>
-				{/if}
+					</figure> -->
 			{/each}
 		</div>
 	</section>
@@ -83,13 +82,16 @@
 	.gallery {
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+		gap: 1rem;
+		justify-content: center;
 	}
-	figure,
+
+	/* figure,
 	img {
 		margin: 0 !important;
 		padding: 0 !important;
-	}
+	} */
 	.picture {
 		cursor: pointer;
 
@@ -168,13 +170,13 @@
 		border-radius: 100%;
 		border: 2px solid #fff;
 	}
-	img.active {
+	/* img.active {
 		border: 1px solid blue;
-	}
-	.testimonials-slider {
+	} */
+	/* .testimonials-slider {
 		display: flex;
 		width: 100%;
-	}
+	} */
 
 	.section-footer {
 		display: flex;
