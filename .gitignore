@@ -15,6 +15,7 @@ src/lib/images/students/
 static/students/*
 !static/students/Photos
 static/students/Photos/*
+!static/students/Photos/img_0.jpg
 !static/students/Photos/img_1.jpg
 !static/students/Photos/img_2.jpg
 !static/students/Photos/img_3.jpg
